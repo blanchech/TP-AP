@@ -31,9 +31,15 @@ while True:
             i=x//30
             j=y//30
             if is_white(i,j):
-                screen[i:i+30][j:j+30]=(255,255,255)
+                width=1
+                height=1
+                rect=[x, y, width, height]
+                red=255
+                green=255
+                blue=255
+                color=[red, green, blue]
+                pygame.draw.rect(screen, color, rect)
 
-    pygame.draw.rect(screen, color, rect)
     pygame.display.update()
 
 
